@@ -1,13 +1,20 @@
 import './App.css';
 import { TodoList } from './components/TodoList';
+import styled from 'styled-components'
 
 function App() {
   return (
-   <section>
-     <h1>Custom TODO-List</h1>
+   <main>
+     <Title>Custom TODO-List</Title>
      <TodoList />
-   </section>
+   </main>
   );
 }
 
 export default App;
+
+const Title = styled.h1`
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+`;
