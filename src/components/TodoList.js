@@ -84,13 +84,15 @@ const NewTaskInput = styled.input`
     font-weight: 600;
     font-size: 14px;
     text-align: center;
+    background-color: #fff;
+    min-width: 258px;
 `
 const List = styled.ul`
    padding: 0;
    margin: 0;
 `
 const AddButton = styled.button`
-    background-color: #fab700;
+    background-color: ${(props) => props.theme.accent};
     color: #000;
     padding: 5px;
     border-radius: 4px;
@@ -102,7 +104,7 @@ const AddButton = styled.button`
     border: 3px solid #000; 
 
     :hover {
-        background-color: #dea917;
+        background-color: ${(props) => props.theme.darkAccent};
         cursor: pointer;
     }
 

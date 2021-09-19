@@ -21,11 +21,13 @@ const Container = styled.li`
     width: 246px;
     margin: 25px 0;
     box-shadow: 0.5rem 0.5rem 0 #000;
+    background-color: #fff;
 `;
 
 const Text = styled.span`
     max-width: 100%;
     word-break: break-all;
+    color: #000;
 `
 
 const Label = styled.label`
