@@ -2,7 +2,26 @@
 import { ADD_TASK, REMOVE_TASK } from '../actions/tasks'
 
 const initialState = {
-    tasks: []
+    tasks: [{
+        name: 'Task 1',
+        type: 'todo'
+    },
+    {
+        name: 'Task 2',
+        type: 'todo'
+    },
+    {
+        name: 'Task 3',
+        type: 'todo'
+    },
+    {
+        name: 'Task 4',
+        type: 'todo'
+    },
+    {
+        name: 'Task 5',
+        type: 'todo'
+    }]
 }
 
 export const items = (state = initialState, action) => {
