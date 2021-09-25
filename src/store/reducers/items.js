@@ -21,6 +21,15 @@ const initialState = {
     {
         name: 'Task 5',
         type: 'todo'
+    }
+    ,
+    {
+        name: 'Task 13',
+        type: 'inprogress'
+    },
+    {
+        name: 'Task 8',
+        type: 'done'
     }]
 }
 

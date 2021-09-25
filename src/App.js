@@ -1,5 +1,5 @@
 import './App.css';
-import { TodoList } from './components/TodoList';
+import { Kanban } from './components/Kaban';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './styles/themes/lightTheme';
@@ -21,8 +21,8 @@ function App() {
         <div className={isDarkTheme ? 'darkTheme' : 'lightTheme'}></div>
       </ChangeTheme>
       <main>
-        <Title>Custom TODO-List</Title>
-        <TodoList />
+        <Title>React Kanban Board</Title>
+        <Kanban />
       </main>
     </ThemeProvider>
   );

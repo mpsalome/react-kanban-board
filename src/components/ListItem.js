@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TodoListItem = (props) => {
+export const ListItem = (props) => {
   return (
     <Container>
       <Label>
