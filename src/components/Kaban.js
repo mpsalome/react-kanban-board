@@ -40,6 +40,8 @@ const TodoContainer = styled.section`
 const ColumWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 // const AddTodoContainer = styled.form`

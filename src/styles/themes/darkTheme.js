@@ -5,4 +5,5 @@ export const darkTheme = {
   text: '#fff',
   accent: '#8A85FF',
   darkAccent: '#3e39b3',
+  columnBackground: '#393838'
 };

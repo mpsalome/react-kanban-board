@@ -20,7 +20,6 @@ const Container = styled.li`
     height: 80px;
     width: 246px;
     margin: 25px 0;
-    box-shadow: 0.5rem 0.5rem 0 #000;
     background-color: #fff;
 `;
 

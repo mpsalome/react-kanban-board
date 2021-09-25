@@ -13,8 +13,10 @@ export const Column = (props) => {
 };
 
 const List = styled.ul`
-  padding: 0;
-  margin: 0 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  background: ${(props) => props.theme.columnBackground};
 `;
 
 const Title = styled.p`
