@@ -1,5 +1,5 @@
    
-import { ADD_TASK, REMOVE_TASK } from '../actions/tasks'
+import { ADD_TASK, CHANGE_TASK, REMOVE_TASK } from '../actions/tasks'
 
 const initialState = {
     tasks: [{
@@ -33,12 +33,18 @@ const initialState = {
     }]
 }
 
+const findTaskIndex = (array, text) => array.findIndex(item => item.name === text)
+
 export const items = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TASK:
             return {
                 ...state,
                 tasks: state.tasks.concat(action.payload)
+            }
+        case CHANGE_TASK: 
+            return {
+                tasks: state.taks[findTaskIndex(state.taks, action.payload.name)].type = action.payload.type
             }
         case  REMOVE_TASK: 
             return {
