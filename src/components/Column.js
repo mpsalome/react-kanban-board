@@ -43,17 +43,19 @@ export const Column = (props) => {
   }
 
   return (
-    <List
-      onDrop={handleDrop}
-      onDragOver={handleDragOver}
-      onDragEnter={handleDragEnter}
-      onDragLeave={handleDragLeave}
-    >
+    <Wrapper>
       <Title>{props.title}</Title>
-      {props.items.map((task) => (
-        <ListItem key={task.id} handleDragItem={handleDragItem} item={task} />
-      ))}
-    </List>
+      <List
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+        onDragEnter={handleDragEnter}
+        onDragLeave={handleDragLeave}
+      >
+        {props.items.map((task) => (
+          <ListItem key={task.id} handleDragItem={handleDragItem} item={task} />
+        ))}
+      </List>
+    </Wrapper>
   )
 }
 
@@ -62,9 +64,17 @@ const List = styled.ul`
   border-radius: 10px;
   margin: 20px;
   background: ${(props) => props.theme.columnBackground};
+  min-width: 266px;
+  min-height: 520px;
 `
 
 const Title = styled.p`
   font-family: 'Fredoka One', cursive;
   font-weight: 400;
+  margin: 15px 0 0 0;
+`
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `
