@@ -10,7 +10,6 @@ export const Kanban = () => {
 
   const handleDragItem = (item) => {
     setDragItem(item)
-    console.log('dragItem handle', dragItem)
   }
 
   return (
