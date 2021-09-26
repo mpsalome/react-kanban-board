@@ -6,6 +6,7 @@ export const ListItem = (props) => {
     e.dataTransfer.effectAllowed = "move"
     e.dataTransfer.setData("text/html", e.target.parentNode);
     e.dataTransfer.setDragImage(e.target.parentNode, 20, 20);
+    e.target.parentNode.classList.add('dragging')
     props.handleDragItem(props.item)
   }
 
@@ -25,7 +26,7 @@ const Container = styled.li`
     border: 3px solid #000;
     height: 80px;
     width: 246px;
-    margin: 25px 0;
+    margin: 25px auto;
     background-color: #fff;
 `;
 

@@ -8,4 +8,7 @@ export default createGlobalStyle`
     h1 {
         color: ${(props) => props.theme.titles};        
     }
+    .dragging {
+        opacity: 50%;
+    }
 `;
