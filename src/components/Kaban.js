@@ -2,25 +2,40 @@
 import { Column } from './Column';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { useState } from 'react'
 
 export const Kanban = () => {
   const items = useSelector((state) => state.items.tasks);
-  //   const [taskValue, setTaskValue] = useState('');
+  const [dragItem, setDragItem] = useState({})
+
+  const handleDragItem = (item) => {
+    setDragItem(item)
+    console.log('dragItem handle', dragItem)
+  }
 
   return (
     <TodoContainer>
       <ColumWrapper>
         <Column
+          onItemDrag={handleDragItem}
+          dragItem={dragItem}
           items={items.filter((item) => item.type === 'todo' )}
           title={'To-do'}
+          type={'todo'}
         />
         <Column
+          onItemDrag={handleDragItem}
+          dragItem={dragItem}
           items={items.filter((item) => item.type === 'inprogress' )}
           title={'In Progress'}
+          type={'inprogress'}
         />
         <Column
+          onItemDrag={handleDragItem}
+          dragItem={dragItem}
           items={items.filter((item) => item.type === 'done' )}
           title={'Done'}
+          type={'done'}
         />
       </ColumWrapper>
     </TodoContainer>
