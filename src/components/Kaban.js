@@ -21,6 +21,7 @@ export const Kanban = () => {
           items={items.filter((item) => item.type === 'todo' )}
           title={'To-do'}
           type={'todo'}
+          hasAddListItem={true} 
         />
         <Column
           onItemDrag={handleDragItem}

@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTask, removeTask } from "../store/actions/tasks";
+import { AddListItem } from './AddListItem';
 
 export const Column = (props) => {
 
   const [newDragItem, setNewDragItem] = useState({})
 
-  const [taskType, setTaskType] = useState(props.type)
+  const [taskType] = useState(props.type)
 
   const dispatch = useDispatch()
 
@@ -55,6 +56,9 @@ export const Column = (props) => {
           <ListItem key={task.id} handleDragItem={handleDragItem} item={task} />
         ))}
       </List>
+      {
+        props.hasAddListItem ? <AddListItem type={props.type}/> : null
+      }
     </Wrapper>
   )
 }
