@@ -10,9 +10,13 @@ export const ListItem = (props) => {
     props.handleDragItem(props.item)
   }
 
+  const onDragEnd = (e) => {
+    e.target.parentNode.classList.remove('dragging')
+  }
+
   return (
     <Container>
-      <Drag draggable={true} onDragStart={onDragStart}>
+      <Drag draggable={true} onDragStart={onDragStart} onDragEnd={onDragEnd}>
         <Text >{props.item.name}</Text>
       </Drag>
     </Container>
