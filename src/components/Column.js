@@ -46,6 +46,9 @@ export const Column = (props) => {
   return (
     <Wrapper>
       <Title>{props.title}</Title>
+      {
+        props.hasAddListItem ? <AddListItem type={props.type}/> : null
+      }
       <List
         onDrop={handleDrop}
         onDragOver={handleDragOver}
@@ -56,9 +59,6 @@ export const Column = (props) => {
           <ListItem key={task.id} handleDragItem={handleDragItem} item={task} />
         ))}
       </List>
-      {
-        props.hasAddListItem ? <AddListItem type={props.type}/> : null
-      }
     </Wrapper>
   )
 }
@@ -81,4 +81,7 @@ const Title = styled.p`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  border: 1px solid ${(props) => props.theme.borderColor};
+  border-radius: 40px;
+  margin: 0 15px;
 `
