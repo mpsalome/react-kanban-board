@@ -10,5 +10,14 @@ export default createGlobalStyle`
     }
     .dragging {
         opacity: 50%;
+        animation: tilting .3s infinite linear alternate;
+    }
+    @keyframes tilting {
+        from {
+            transform: rotate(-5deg);
+        }
+        to {
+            transform: rotate(5deg);
+        }
     }
 `;
