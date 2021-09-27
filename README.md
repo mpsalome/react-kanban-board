@@ -1,11 +1,11 @@
-# ToDo List
-Simple to do list used to train my React skills. 
+# React Kanban Board
+Simple kanban board project to train my React skills. 
 
-Used styled-components to style the app and to make available choosing between themes. 
+In this app I used styled-components to style the app and to make available choosing between light and dark theme. Also used redux to manage the application state.
 
 ## Link to see the application 
 
-https://mpsalome-todo-list.netlify.app 
+https://mpsalome-kanban-board.netlify.app/
 
 # Getting Started with Create React App
 
